@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Book Repository{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Book Repository</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Homepage</a></li>
+                <li><a href="/book/create/">Create Book</a></li>
+                <li><a href="/author/create/">Create Author</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Book Repository. All rights reserved.</p>
+    </footer>
+</body>
+</html>
